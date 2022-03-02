@@ -1,0 +1,32 @@
+<div class="group-container">
+    <div class="group-box">
+        <div class="group-list" *ngIf="(cluster$|async) as cluster">
+            <h2>group_1</h2>
+            <div>
+                <div class="example-box" *ngFor="let item of cluster.group_1">{{item}}</div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="group-box">
+        <div class="group-list">
+            <h2>group_2</h2>
+            <div *ngIf="(cluster$|async) as cluster">
+                <div class="example-box" *ngFor="let item of cluster.group_2">{{item}}</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div class="group-container" *ngFor="let itemkv of clusterentries|keyvalue">
+    <div class="group-box" >
+        <div class="group-list">
+            <h2>{{itemkv.key}}</h2>
+            <div>
+                <div class="example-box">{{itemkv.value}}</div>
+
+            </div>
+        </div>
+    </div>
+</div> -->

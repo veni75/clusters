@@ -1,0 +1,12 @@
+
+<mat-sidenav-container class="sidenav-container" >
+  <mat-sidenav mode="side" opened >
+    <mat-nav-list class="sidenav-list">
+      <a mat-list-item routerLink="/generate" routerLinkActive="active-link">Kezdeti adatok generálása</a>
+      <a mat-list-item routerLink="/result" routerLinkActive="active-link">Eredmény</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

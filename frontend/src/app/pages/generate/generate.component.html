@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="buttons">
+        <p>Random seed<span>{{randomSeed}}</span></p>
+        <p>Embedding-ek száma<span>{{numberOfEmbedding}}</span></p>
+        <p>Embedding-ek hossza<span>{{lengthOfEmbedding}}</span></p>
+        <p>Vektorhalmazok száma<span>{{numberOfVectorcluster}}</span></p>
+        <p>Threshold érték<span>{{threshold}}</span></p>
+        <button (click)="embeddingGenerateButton()">Embedding-ek generálása</button>
+        <button (click)="onUpdate($event)">Újra klaszterezés futtatása</button>
+    </div>
+
+    <div cdkDropListGroup>
+        <div class="embedding-container">
+            <div cdkDropList [cdkDropListData]="embeddings" class="embedding-list" (cdkDropListDropped)="drop($event)">
+                <div class="example-box" *ngFor="let item of embeddings" cdkDrag>
+                    {{item}}</div>
+            </div>
+        </div>
+
+        <div class="group-container">
+            <div class="group-box">
+                <div cdkDropList [cdkDropListData]="group_1" class="group-list" (cdkDropListDropped)="drop($event)">
+                    <h2>group_1</h2>
+                    <div class="example-box" *ngFor="let item of group_1" cdkDrag>{{item}}</div>
+                </div>
+            </div>
+
+            <div class="group-box">
+                <div cdkDropList [cdkDropListData]="group_2" class="group-list" (cdkDropListDropped)="drop($event)">
+                    <h2>group_2</h2>
+                    <div class="example-box" *ngFor="let item of group_2" cdkDrag>{{item}}</div>
+                </div>
+            </div>
+            <!-- <div class="group-box" *ngFor="let vector of vectorclusters">
+                <div cdkDropList [cdkDropListData]="vector.text" class="group-list" (cdkDropListDropped)="drop($event)">
+                    <h2>{{vector.text}}</h2>
+                    <div class="example-box" *ngFor="let item of vector.text" cdkDrag>{{item}}</div>
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+</div>

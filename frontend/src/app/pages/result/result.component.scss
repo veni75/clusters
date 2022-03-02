@@ -1,0 +1,31 @@
+.group-container{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .group-box{
+    margin: 10px;
+  }
+
+  .group-list {
+      width: 300px;    
+      border: 1px solid rgb(0, 0, 128);
+      height: 600px;
+      color: rgb(0, 0, 128);
+      border-radius: 20px;
+      overflow: hidden;
+      text-align: center;
+  }
+
+    .example-box {
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 5px;
+        box-sizing: border-box;
+        background: white;
+        display: flex;
+        flex-direction: row;
+        font-size: 15px;
+        padding: 20px 10px;        
+        margin: 15px;        
+      }
